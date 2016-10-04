@@ -1,0 +1,1 @@
+json.array! @assessment_units, partial: 'assessment_units/assessment_unit', as: :assessment_unit

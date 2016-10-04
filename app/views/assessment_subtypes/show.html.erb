@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @assessment_subtype.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @assessment_subtype.description %>
+</p>
+
+<%= link_to 'Edit', edit_assessment_subtype_path(@assessment_subtype) %> |
+<%= link_to 'Back', assessment_subtypes_path %>

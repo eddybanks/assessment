@@ -1,0 +1,81 @@
+[
+  {
+    "name": "Part I: Cover Page", "section": 1,
+    "items": [
+      {
+        "name": "Name of Academic Department (if not a standalone program)",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Name of College/School/Branch",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Academic Year/Assessment Period",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Submitted By (include email address)",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Date Submitted to College/School/Branch for Review",
+        "input_type": "date"
+      },
+      {
+        "name": "Date Reviewed by College Assessment and Review Committee (CARC) or the equivalent",
+        "input_type": "date"
+      },
+      {
+        "name": "State whether ALL of the program’s student learning outcomes (SLOs) are assessed over one year, two years, OR three years",
+        "input_type": "text_area"
+      },
+      {
+        "name": "If the program’s SLO’s are targeted/assessed/measured within two years or three years, please state whether this assessment record focuses on SLOs from the first year, second year, or third year of your assessment cycle",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Describe the program changes that were implemented during this reporting period in response to the previous period’s assessment results. Please include evidence of implemented changes in an appendix",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Describe any revisions to your assessment process that you made for this reporting cycle and/or plan to make for future reporting cycles",
+        "input_type": "text_area"
+      }
+    ]
+  },
+  {
+    "name": "Part II: Report Body", "section": 2,
+    "items": [
+      {
+        "name": "2_table_1",
+        "input_type": "table",
+        "section": "010303"
+      },
+      {
+        "name": "Assessment Measures (including whether they were direct or indirect)",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Performance Benchmark",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Sampled Population",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Results",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Analysis/Faculty Discussion",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Recommendations for Improvement/Changes",
+        "input_type": "text_area"
+      }
+    ]
+  }
+]

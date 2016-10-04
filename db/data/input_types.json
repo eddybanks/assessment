@@ -1,0 +1,17 @@
+[
+  { "name": "text_field" },
+  { "name": "text_area" },
+  { "name": "checkbox" },
+  { "name": "table" },
+  { "name": "table_header" },
+  { "name": "table_cell" },
+  { "name": "intro" },
+  { "name": "header" },
+  { "name": "subheader" },
+  { "name": "note" },
+  { "name": "document" },
+  { "name": "date" },
+  { "name": "collection" },
+  { "name": "integer" },
+  { "name": "list" }
+]

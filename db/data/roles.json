@@ -1,0 +1,5 @@
+[
+  { "name": "Superuser", "description": "A Central admin user with access to everything" },
+  { "name": "Admin", "description": "Assigned to upload, edit and view" },
+  { "name": "AssessmentUnitUser", "description": "Regular users who can view and fill reports" }
+]

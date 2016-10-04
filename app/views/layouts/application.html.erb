@@ -9,9 +9,11 @@
   </head>
 
   <body>
-    <div class="haha">
-
+    <div class="outer-wrapper">
+      <%= render 'layouts/nav' %>
+      <div class="inner-wrapper">
+        <%= yield %>
+      </div>
     </div>
-    <%= yield %>
   </body>
 </html>

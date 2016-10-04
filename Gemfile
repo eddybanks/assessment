@@ -24,6 +24,8 @@ gem 'normalize-rails'                                                     ## nor
 gem 'rails_admin'
 gem 'vuejs-rails'
 gem 'rolify'
+gem 'figaro'
+gem 'rails-erd'
 
 group :development, :test do
   gem 'byebug', platform: :mri

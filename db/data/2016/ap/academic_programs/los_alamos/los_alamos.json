@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Part I: Cover Page", "section": 1,
+    "items": [
+      {
+        "name": "Name of Academic Department",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Degree/Type",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Contact Person (name, title, email)",
+        "input_type": "text_field"
+      },
+      {
+        "name": "Date Submitted",
+        "input_type": "date"
+      },
+      {
+        "name": "Date reviewed by CARC",
+        "input_type": "date"
+      },
+      {
+        "name": "Program’s Assessment Plan (assessment of all SLOs) spans 1, 2, or 3 Assessment Cycles?",
+        "input_type": "text_area"
+      },
+      {
+        "name": "What year in the Assessment Cycle (i.e., 1st, 2nd, or 3rd)?",
+        "input_type": "subheader"
+      },
+      {
+        "name": "Describe the actions and/or plan revisions that were implemented during this reporting period in response to the previous period’s assessment results (e.g. what was implemented during F13-Sp14 as result of F12-Sp13’s reporting period?)",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Documentation required: Include documents such as updated syllabi, textbook changes, emails, meeting agendas, etc.",
+        "input_type": "document"
+      }
+    ]
+  },
+  {
+    "name": "Part II: Assessment Report", "section": 2,
+    "items": [
+      {
+        "name": "Program Goal",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Program SLO (Assessed)",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Measures of SLO",
+        "input_type": "header"
+      },
+      {
+        "name": "Measure #1 (# of iterations taught)",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Documentation required: Attach a blank copy of the assessment measured",
+        "input_type": "document"
+      },
+      {
+        "name": "Direct or Indirect",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Criteria for Success",
+        "input_type": "text_area"
+      },
+      {
+        "name": "Total number of students assessed",
+        "input_type": "integer"
+      },
+      {
+        "name": "Total number of students that scored acceptable or better",
+        "input_type": "integer"
+      },
+      {
+        "name": "Measure 1 Results",
+        "input_type": "subheader"
+      },
+      {
+        "name": "An aggregation of the collected data should be described and/or attached for the data results section",
+        "input_type": "text_area"
+      }
+    ]
+  }
+]

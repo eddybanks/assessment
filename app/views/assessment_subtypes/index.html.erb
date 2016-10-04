@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Assessment Subtypes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @assessment_subtypes.each do |assessment_subtype| %>
+      <tr>
+        <td><%= assessment_subtype.name %></td>
+        <td><%= assessment_subtype.description %></td>
+        <td><%= link_to 'Show', assessment_subtype %></td>
+        <td><%= link_to 'Edit', edit_assessment_subtype_path(assessment_subtype) %></td>
+        <td><%= link_to 'Destroy', assessment_subtype, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Assessment Subtype', new_assessment_subtype_path %>

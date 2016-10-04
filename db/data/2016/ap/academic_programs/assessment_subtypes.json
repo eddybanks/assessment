@@ -1,0 +1,6 @@
+[
+  { "name": "UNM Generic Template", "au_path": "generic" },
+  { "name": "College of Arts and Sciences", "au_path": "arts_and_sciences" },
+  { "name": "School of Engineering", "au_path": "engineering" },
+  { "name": "UNM Los Alamos", "au_path": "los_alamos" }
+]
