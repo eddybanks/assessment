@@ -1,9 +1,24 @@
-<section id="home">
 
-<ul>
-<li class="assementunits"><%= link_to "assessment_units", assessment_units_path%></li>
-<li class="assessment_type"><%= link_to "assessment_types", assessment_types_path%></li>
-<li class="assessment_type"><%= link_to "assessment_subtypes", assessment_subtypes_path%></li>
-</ul>
 
+
+<section id="homepage">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-md-18">
+        <div class="thumbnail-box">
+          <div class="assess-reps-box">
+            <h2><%= link_to 'Assessment Reports', year_assessment_types_path(current_year, ap_flag: false) %></h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-md-6">
+        <div class="thumbnail-box">
+          <div class="assess-plans-box">
+            <h2><%= link_to 'Assessment Plans', year_assessment_types_path(current_year, ap_flag: true) %></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+

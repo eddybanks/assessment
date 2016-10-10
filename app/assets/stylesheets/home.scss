@@ -1,0 +1,40 @@
+
+
+
+.thumbnail-box{
+  margin: 100px 0px 100px 0px;
+}
+.assess-reps-box{
+  background-color: $af_white;
+
+  padding: 100px;
+  margin: 10px;
+}
+.assess-plans-box{
+  background-color: $electric_blue;
+  padding: 100px;
+  margin: 10px;
+}
+
+.thmbnl{
+  margin: 40px;
+  padding-top: 20px;
+  background-color: rgba(30,30,30,0.4);
+  a:link, a:visited{
+    color: lighten($electric_blue, 30%);
+    text-decoration: none;
+  }
+  a:hover, a:active{
+    color: $electric_blue;
+    text-decoration: none;
+  }
+  .actions{
+    text-align: center;
+    & .list-item{
+      background-color: rgba(30,30,30,0.3);
+      margin: 0px;
+    }
+  }
+}
+
+

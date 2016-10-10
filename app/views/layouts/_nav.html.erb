@@ -15,12 +15,17 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ><%= link_to "Home", home_path%></li>
+        <li class="home"><%= link_to "Home", home_path%></li>
+       <li>
+       <%= link_to "Reports", year_assessment_types_path(current_year) %>
+     </li>
+     <li>
+       <%= link_to "Plans", year_assessment_types_path(current_year) %>
+     </li>
+
         <li> <%= link_to "contact", contact_path %></li>
      <li ><%= link_to "calendar", calendar_path %> </li>
-     <li>
-       <%= link_to "reports", year_assessment_types_path(current_year) %>
-     </li>
+
      <li ><%= link_to "faqs", faqs_path  %> </li>
      <li ><%= link_to "wiki", wiki_path%> </li>
      <li ><%= link_to "About Us", about_path  %> </li>
