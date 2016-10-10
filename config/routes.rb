@@ -18,5 +18,4 @@ Rails.application.routes.draw do
   get   'home'      => 'home#index'
   get   'faqs'      => 'home#faqs'
   get   'wiki'      => 'home#wiki'
-  get    'aboutus'  => 'home#aboutus'
 end

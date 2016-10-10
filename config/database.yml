@@ -3,21 +3,21 @@ development:
   encoding: unicode
   database: assessment_development
   pool: 5
-  username: bhanu
-  password:
+  username: <%= ENV["DEV_USERNAME"] %>
+  password: <%= ENV["DEV_PASSWORD"] %>
 
 test:
   adapter: postgresql
   encoding: unicode
   database: assessment_test
   pool: 5
-  username: bhanu
-  password:
+  username: <%= ENV["DEV_USERNAME"] %>
+  password: <%= ENV["DEV_PASSWORD"] %>
 
 production:
   adapter: postgresql
   encoding: unicode
   database: assessment_production
   pool: 5
-  username: bhanu
-  password:
+  username: <%= ENV["DEV_USERNAME"] %>
+  password: <%= ENV["DEV_PASSWORD"] %>
