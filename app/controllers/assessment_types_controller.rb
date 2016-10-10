@@ -1,5 +1,6 @@
 class AssessmentTypesController < ApplicationController
   before_action :set_assessment_type, only: [:show, :edit, :update, :destroy]
+  before_action :scoped_year
 
   # GET /assessment_types
   # GET /assessment_types.json
@@ -64,11 +65,15 @@ class AssessmentTypesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_assessment_type
-      @assessment_type = AssessmentType.find(params[:id])
+      @assessment_type = scoped_year.assessment_types.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assessment_type_params
       params.require(:assessment_type).permit(:name, :description)
+    end
+
+    def scoped_year
+      Year.find_by name: '2016'
     end
 end

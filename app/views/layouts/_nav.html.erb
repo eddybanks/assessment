@@ -18,6 +18,9 @@
         <li ><%= link_to "Home", home_path%></li>
         <li> <%= link_to "contact", contact_path %></li>
      <li ><%= link_to "calendar", calendar_path %> </li>
+     <li>
+       <%= link_to "reports", year_assessment_types_path(current_year) %>
+     </li>
      <li ><%= link_to "faqs", faqs_path  %> </li>
      <li ><%= link_to "wiki", wiki_path%> </li>
      <li ><%= link_to "About Us", about_path  %> </li>
