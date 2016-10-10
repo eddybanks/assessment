@@ -1,6 +1,6 @@
 [
   {
-    "name": "template_name", "section": 1,
+    "name": "part_name", "section": 1,
     "items": [
       {
         "name": "form_field_label",
