@@ -11,5 +11,8 @@ Rails.application.routes.draw do
 
   get   'calendar'  =>  'home#calendar'
   get   'contact'   =>  'home#contact'
-
+  get   'home'      => 'home#index'
+  get   'faqs'      => 'home#faqs'
+  get   'wiki'      => 'home#wiki'
+  get    'aboutus'  => 'home#aboutus'
 end

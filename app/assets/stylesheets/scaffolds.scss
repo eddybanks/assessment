@@ -4,14 +4,13 @@ body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
+  padding-top: 70px;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  margin: 33px;
 }
 
 pre {
@@ -21,26 +20,14 @@ pre {
 }
 
 a {
-  color: #000;
+  color: blue;
 
-  &:visited {
-    color: #666;
-  }
+  
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: blue;
+    background-color: white;
   }
-}
-
-th {
-  padding-bottom: 5px;
-}
-
-td {
-  padding-bottom: 7px;
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 div {
@@ -58,7 +45,10 @@ div {
   background-color: red;
   display: table;
 }
-
+.navbar-default .navbar-pills {
+    background-color: #FFFFFFF;
+    border-color: #252525;
+}
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -73,17 +63,27 @@ div {
     padding: 5px 5px 5px 15px;
     font-size: 12px;
     margin: -7px;
-    margin-bottom: 0;
+    margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
   }
 
-  ul li {
+  ul {
     font-size: 12px;
     list-style: square;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
   }
+  li a {
+    display: block;
+    color: blue;
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
-label {
-  display: block;
+/* Change the link color on hover */
+
+
 }

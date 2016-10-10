@@ -10,4 +10,15 @@ class HomeController < ApplicationController
 
   def contact
   end
+
+  def faqs
+  end
+  
+  def wiki
+  end
+
+  def aboutus
+  end
+
+
 end
