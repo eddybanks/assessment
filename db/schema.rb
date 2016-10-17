@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161004200715) do
+ActiveRecord::Schema.define(version: 20161017195455) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20161004200715) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "year_id"
+    t.index ["year_id"], name: "index_assessment_types_on_year_id", using: :btree
   end
 
   create_table "assessment_units", force: :cascade do |t|
@@ -84,16 +86,14 @@ ActiveRecord::Schema.define(version: 20161004200715) do
 
   create_table "years", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "assessment_type_id"
-    t.index ["assessment_type_id"], name: "index_years_on_assessment_type_id", using: :btree
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "assessment_subtypes", "assessment_types"
+  add_foreign_key "assessment_types", "years"
   add_foreign_key "assessment_units", "assessment_subtypes"
   add_foreign_key "input_data", "items"
   add_foreign_key "items", "parts"
   add_foreign_key "parts", "assessment_units"
-  add_foreign_key "years", "assessment_types"
 end

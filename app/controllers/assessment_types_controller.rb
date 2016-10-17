@@ -5,7 +5,7 @@ class AssessmentTypesController < ApplicationController
   # GET /assessment_types
   # GET /assessment_types.json
   def index
-    @assessment_types = AssessmentType.all
+    @assessment_types = scoped_year.assessment_types.all
   end
 
   # GET /assessment_types/1
