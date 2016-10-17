@@ -1,0 +1,103 @@
+[
+ {
+   "name": "Part I: Cover Page", "section":1,
+   "items": [
+   {
+   	"name": "Academic Program",
+   	"input_type": "text_field"
+   },
+   {
+   	"name": "Department/Program",
+   	"input_type": "text_field"
+   },
+    {
+   	"name": "Degree Program",
+   	"input_type": "text_field"
+   },
+    {
+   	"name": "Person(s) preparing reports",
+   	"input_type": "text_field"
+   },
+    {
+   	"name": "Date Submitted",
+   	"input_type": "Date"
+   },
+    {
+   	"name": "Describe the actions and/or revisions that were implemented during the previous reporting period.(Appendix 1—attach relevant evidence, i.e., updated syllabi, curricular updates, program initiatives, etc.)",
+   	"input_type": "text_area"
+   }
+
+   ]
+
+ },
+
+ {
+
+  "name": "Part II: Report Body", "section":2,
+  "items": [
+  {
+   	"name": "2_table_1",
+   	"input_type": "table"
+   },
+   
+  {
+   	"name": "Respond to the following questions",
+   	"sub_items":[
+     {
+     	"name": "Were all students assessed or a sample? (Provide rationale for sampled population.)",
+     	"input_type": "text_area"
+     },
+     {
+     	"name": "Based on the results achieved, which SLOs were met?",
+     	"input_type": "text_area"
+     },
+     {
+     	"name": "Based on the results achieved, which SLOs were partially met?",
+     	"input_type": "text_area"
+     },
+     {
+     	"name": "Based on the results achieved, which SLOs were not met?",
+     	"input_type": "text_area"
+     }
+
+   	]
+   },
+
+   {
+   	"name": "Describe the analysis of the results. (What do they tell you about student learning? What did you learn about strengths and weaknesses of your program?) If specific results are not available, describe the progress that has been made on the initiatives included in the approved assessment plan.",
+   	"input_type": "text_area"
+   },
+
+    {
+   	"name": "Describe the departmental process by which faculty reviewed the assessment procedures and results and decided on the actions and/or revisions that were indicated by them. (Appendix 2—attach relevant evidence, i.e., meeting agendas, minutes, emails, etc.)",
+   	"input_type": "text_area"
+   },
+    {
+   	"name": "Describe the actions and/or revisions that will be implemented in response to the assessment processes and results.",
+   	"input_type": "text_area"
+   },
+   {
+   	"name": "Given the assessment activities and results to date, describe your assessment plans for the next year. If significant changes have been made to degree program SLOs or to the general assessment strategy, please clearly describe. (Remember that half of all assessment measures must be direct measures of student learning.)",
+   	"input_type": "text_area"
+   },
+    {
+   	"name": "Feedback on Annual Progress Report from the College Assessment Review Committee",
+   	"input_type": "text_area"
+   },
+    {
+   	"name": "Strengths of report and progress on assessment “loop”:  ",
+   	"input_type": ""
+   },
+    {
+   	"name": "Concerns/Questions: ",
+   	"input_type": ""
+   },
+    {
+   	"name": "Suggestions for future reports or assessment approaches: ",
+   	"input_type": ""
+   }
+  ]
+
+ }
+
+]
