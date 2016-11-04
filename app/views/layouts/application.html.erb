@@ -10,11 +10,12 @@
 
   <body>
     <div class="outer-wrapper">
+      <%= render 'layouts/jumbo_box' %>
       <%= render 'layouts/nav' %>
       <div class="inner-wrapper">
         <%= yield %>
-        <%= render 'layouts/footer' %>
       </div>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>

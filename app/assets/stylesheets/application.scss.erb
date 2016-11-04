@@ -1,9 +1,21 @@
 @import "normalize-rails";
-@import "bootstrap-sprockets";
+@import "base";
+@import "bootstrap-override";
 @import "bootstrap";
 @import "font-awesome";
 @import "fullcalendar";
 @import "layouts";
-@import "bootstrap-override";
-@import "base";
 @import "home";
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.inner-wrapper {
+  padding: 0;
+  margin: 0;
+  min-height: 90vh;
+}

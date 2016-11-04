@@ -1,24 +1,12 @@
-
-
-
-<section id="homepage">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6 col-md-18">
-        <div class="thumbnail-box">
-          <div class="assess-reps-box">
-            <h2><%= link_to 'Assessment Reports', year_assessment_types_path(current_year, ap_flag: false) %></h2>
-          </div>
+<section>
+  <div class="box-msg-2">
+    <% @assessment_types.each do |assessment_type| %>
+      <div class="col-sm-3">
+        <div class="card card-block">
+          <h4 class="card-title"><%= assessment_type.name %></h4>
+          <p class="card-text"><%= assessment_type.description %></p>
         </div>
       </div>
-      <div class="col-xs-6 col-md-6">
-        <div class="thumbnail-box">
-          <div class="assess-plans-box">
-            <h2><%= link_to 'Assessment Plans', year_assessment_types_path(current_year, ap_flag: true) %></h2>
-          </div>
-        </div>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
-

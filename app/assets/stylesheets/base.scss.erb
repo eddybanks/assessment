@@ -16,4 +16,31 @@ $dosis: 'Dosis', sans-serif;
 $poiret-one: 'Poiret One', cursive;
 $maven-pro: 'Maven Pro', sans-serif;
 
+// images
 $duck-pond: url(<%= image_path("duck_pond.jpg") %>);
+$unm-brand: url("http://www.unm.edu/assets/img/unm-full.gif");
+$home-big-pic: url("http://assessment.unm.edu/assets/img/assessment-banner.jpg");
+
+@mixin links($lvcolor: rgba(white, 1), $hacolor: rgba(240,230,220, 0.7)) {
+  a:link, a:visited {
+    color: $lvcolor;
+  }
+
+  a:hover, a:active {
+    color: $hacolor;
+  }
+}
+
+@mixin boxes($box-height: 40vh, $box-margin: 0, $box-padding: 3%, $box-bg: $af_white, $box-color: $unm-color) {
+  min-height: $box-height;
+  margin: $box-margin;
+  padding: $box-padding;
+  background: $box-bg;
+  color: $box-color;
+}
+
+@mixin fonts($font-family: $open-sans, $color: $jet, $size: 1em) {
+  font-family: $font-family;
+  color: $color;
+  font-size: $size
+}

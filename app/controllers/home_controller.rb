@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
+    @assessment_types = AssessmentType.all
   end
 
   def about
