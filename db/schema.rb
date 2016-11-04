@@ -86,8 +86,10 @@ ActiveRecord::Schema.define(version: 20161017195455) do
 
   create_table "years", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.integer  "assessment_type_id"
+    t.index ["assessment_type_id"], name: "index_years_on_assessment_type_id", using: :btree
   end
 
   add_foreign_key "assessment_subtypes", "assessment_types"
@@ -96,4 +98,5 @@ ActiveRecord::Schema.define(version: 20161017195455) do
   add_foreign_key "input_data", "items"
   add_foreign_key "items", "parts"
   add_foreign_key "parts", "assessment_units"
+  add_foreign_key "years", "assessment_types"
 end

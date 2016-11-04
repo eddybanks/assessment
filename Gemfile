@@ -26,6 +26,7 @@ gem 'vuejs-rails'
 gem 'rolify'
 gem 'figaro'
 gem 'rails-erd'
+gem 'sendgrid'
 
 group :development, :test do
   gem 'byebug', platform: :mri
