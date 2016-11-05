@@ -16,7 +16,11 @@
       <div class="col-sm-4">
         <div class="card card-block">
           <h4 class="card-title"><%= assessment_type.name %></h4>
-          <p class="card-text"><%= assessment_type.description %></p>
+          <ul class="card-text">
+            <%= assessment_type.assessment_subtypes.each do |s| %>
+            <li><%= s.name %></li>
+            <% end %>
+          </ul>
         </div>
       </div>
     <% end %>
