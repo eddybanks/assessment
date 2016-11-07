@@ -9,9 +9,6 @@ class HomeController < ApplicationController
   def calendar
   end
 
-  def contact
-  end
-
   def faqs
   end
 
