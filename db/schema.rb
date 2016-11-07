@@ -10,19 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103072154) do
+ActiveRecord::Schema.define(version: 20161105214453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "assessment_subtypes", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "assessment_type_id"
-    t.index ["assessment_type_id"], name: "index_assessment_subtypes_on_assessment_type_id", using: :btree
-  end
 
   create_table "assessment_types", force: :cascade do |t|
     t.string   "name"
@@ -34,13 +25,15 @@ ActiveRecord::Schema.define(version: 20161103072154) do
     t.index ["year_id"], name: "index_assessment_types_on_year_id", using: :btree
   end
 
-  create_table "assessment_units", force: :cascade do |t|
+  create_table "forms", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-    t.integer  "assessment_subtype_id"
-    t.index ["assessment_subtype_id"], name: "index_assessment_units_on_assessment_subtype_id", using: :btree
+    t.integer  "template_id"
+    t.integer  "year_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["template_id"], name: "index_forms_on_template_id", using: :btree
+    t.index ["year_id"], name: "index_forms_on_year_id", using: :btree
   end
 
   create_table "input_data", force: :cascade do |t|
@@ -69,10 +62,36 @@ ActiveRecord::Schema.define(version: 20161103072154) do
   create_table "parts", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "templates", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "assessment_type_id"
+    t.integer  "year_id"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
-    t.integer  "assessment_unit_id"
-    t.index ["assessment_unit_id"], name: "index_parts_on_assessment_unit_id", using: :btree
+    t.index ["assessment_type_id"], name: "index_templates_on_assessment_type_id", using: :btree
+    t.index ["year_id"], name: "index_templates_on_year_id", using: :btree
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
   create_table "versions", force: :cascade do |t|
@@ -93,11 +112,16 @@ ActiveRecord::Schema.define(version: 20161103072154) do
     t.index ["assessment_type_id"], name: "index_years_on_assessment_type_id", using: :btree
   end
 
-  add_foreign_key "assessment_subtypes", "assessment_types"
   add_foreign_key "assessment_types", "years"
-  add_foreign_key "assessment_units", "assessment_subtypes"
+  add_foreign_key "forms", "templates"
+  add_foreign_key "forms", "years"
   add_foreign_key "input_data", "items"
   add_foreign_key "items", "parts"
+<<<<<<< HEAD
   add_foreign_key "parts", "assessment_units"
   add_foreign_key "years", "assessment_types"
+=======
+  add_foreign_key "templates", "assessment_types"
+  add_foreign_key "templates", "years"
+>>>>>>> 86203e11ac5712a81ecf38eb7cef14e4bedf37ce
 end

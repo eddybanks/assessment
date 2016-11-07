@@ -10,3 +10,9 @@
 #welcome-msg {
     // background-color: rgba($jet, 0.4);
 }
+
+section {
+    h2 {
+        @include fonts($pt-sans, rgba($jet, .8), 2em);
+    }
+}

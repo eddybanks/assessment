@@ -1,1 +1,0 @@
-json.partial! "assessment_units/assessment_unit", assessment_unit: @assessment_unit

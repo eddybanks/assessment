@@ -1,1 +1,0 @@
-json.array! @assessment_subtypes, partial: 'assessment_subtypes/assessment_subtype', as: :assessment_subtype

@@ -26,11 +26,16 @@ gem 'vuejs-rails'
 gem 'rolify'
 gem 'figaro'
 gem 'rails-erd'
+
 gem 'sendgrid'
+
+gem 'devise'
+
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'minitest-rails'
+  gem 'pry-rails'
 end
 
 group :development do

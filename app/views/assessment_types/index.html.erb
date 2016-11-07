@@ -17,7 +17,7 @@
         <td><%= assessment_type.name %></td>
         <td><%= assessment_type.description %></td>
         <td><%= link_to 'Show', assessment_type %></td>
-        <td><%= link_to 'Edit', year_edit_assessment_type_path(assessment_type, current_year) %></td>
+        <td><%= link_to 'Edit', edit_year_assessment_type_path(assessment_type, current_year) %></td>
         <td><%= link_to 'Destroy', assessment_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
