@@ -1,1 +1,0 @@
-json.partial! "assessment_subtypes/assessment_subtype", assessment_subtype: @assessment_subtype

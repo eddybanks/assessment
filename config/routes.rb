@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :forms
+  resources :templates
   devise_for :users
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
 
@@ -7,8 +9,6 @@ Rails.application.routes.draw do
   resources :input_types
   resources :items
   resources :parts
-  resources :assessment_units
-  resources :assessment_subtypes
   resources :assessment_types
   resources :years do
     resources :assessment_types do
