@@ -1,7 +1,9 @@
 <section>
   <div class="box-msg-2">
+    <h4><%= image_tag "http://my.unm.edu/images/card_top-widgets.png" %> Assessment Types</h4>
     <% @assessment_types.each do |assessment_type| %>
-      <div class="col-sm-3">
+      <div class="col-sm-4">
+
         <div class="card card-block">
           <h4 class="card-title"><%= assessment_type.name %></h4>
           <p class="card-text"><%= assessment_type.description %></p>
