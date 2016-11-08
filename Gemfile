@@ -30,6 +30,7 @@ gem 'rails-erd'
 gem 'sendgrid'
 
 gem 'devise'
+gem 'devise-bootstrap-views'
 
 
 group :development, :test do
