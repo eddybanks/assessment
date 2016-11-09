@@ -4,6 +4,7 @@ class AssessmentType < ApplicationRecord
   scope :ar, -> { where(rp_flag: true) }
   scope :ap, -> { where(rp_flag: false) }
 
+  resourcify
   # def self.ar
   #   where(rp_flag: true)
   # end
