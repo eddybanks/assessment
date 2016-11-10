@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
-
+  resources :users
   resources :input_data
   resources :input_types
   resources :items

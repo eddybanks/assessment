@@ -4,5 +4,5 @@ class AssessmentType < ApplicationRecord
 
   enum report_type: [:ar, :ap]
   scope :report_type, ->(rp) { where report_type: rp }
-
+  resourcify
 end

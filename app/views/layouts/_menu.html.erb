@@ -1,4 +1,4 @@
-<nav class="navbar navbar-light bg-faded">
+<div class="navbar navbar-light bg-faded">
 
   <!-- Brand and toggle get grouped for better mobile display -->
   <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-responsive" aria-controls="navbar-responsive" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -14,7 +14,12 @@
       <li class="nav-item"><%= link_to "Wiki",      wiki_path, class: 'nav-link' %></li>
       <li class="nav-item"><%= link_to "FAQs",      faqs_path, class: 'nav-link' %></li>
     </ul>
+    <ul class="nav navbar-nav pull-right">
+      <% if user_signed_in?%>
+      <li class="nav-item"><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'nav-link'  %></li>
+      <% end %>
+    </ul>
 
   </div><!-- /.navbar-collapse -->
 
-</nav>
+</div>
