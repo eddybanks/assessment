@@ -20,6 +20,7 @@ $maven-pro: 'Maven Pro', sans-serif;
 $duck-pond: url(<%= image_path("duck_pond.jpg") %>);
 $unm-brand: url("http://www.unm.edu/assets/img/unm-full.gif");
 $home-big-pic: url("http://assessment.unm.edu/assets/img/assessment-banner.jpg");
+$footer-bg: url('//webcore.unm.edu/v2/images/mesa-mountain-red.png');
 
 @mixin links($lvcolor: rgba(white, 1), $hacolor: rgba(240,230,220, 0.7)) {
   a:link, a:visited {
@@ -28,6 +29,7 @@ $home-big-pic: url("http://assessment.unm.edu/assets/img/assessment-banner.jpg")
 
   a:hover, a:active {
     color: $hacolor;
+    text-decoration: none;
   }
 }
 

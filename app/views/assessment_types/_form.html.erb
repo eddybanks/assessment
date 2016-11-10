@@ -4,7 +4,7 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.input :description %>
-    <%= f.input :rp_flag, as: :radio_buttons %>
+    <%= f.input :report_type, label: 'Type of Form', collection: [['Assessment Report', :ar],['Assessment Plan', :ap]], prompt: 'Select a form Type' %>
   </div>
 
   <div class="form-actions">

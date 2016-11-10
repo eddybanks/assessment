@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   end
 
   def about
+    #page_variables
+    @page_header = 'About The Site'
   end
 
   def calendar
