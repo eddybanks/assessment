@@ -10,10 +10,13 @@
 
   <body>
     <div class="outer-wrapper">
-      <%= render 'layouts/top_nav' %>
+      <%= render 'layouts/unm_nav' %>
       <%= render 'layouts/jumbo_box' %>
       <%= render 'layouts/menu' %>
       <div class="inner-wrapper">
+        <% if @page_header.present? %>
+        <%= render 'layouts/header' %>
+        <% end %>
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>

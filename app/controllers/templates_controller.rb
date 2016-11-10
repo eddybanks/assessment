@@ -10,6 +10,8 @@ class TemplatesController < ApplicationController
   # GET /templates/1
   # GET /templates/1.json
   def show
+    # page variables
+    @page_header = @template.assessment_type.name
   end
 
   # GET /templates/new

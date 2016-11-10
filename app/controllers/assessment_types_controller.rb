@@ -12,6 +12,8 @@ class AssessmentTypesController < ApplicationController
   # GET /assessment_types/1
   # GET /assessment_types/1.json
   def show
+    # page variables
+    @page_header = @assessment_type.name
   end
 
   # GET /assessment_types/new

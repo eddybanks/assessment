@@ -4,16 +4,18 @@
   <h3 class="page-header"><%= image_tag "http://my.unm.edu/images/card_top-widgets.png" %> Assessment Reports</h3>
     <% @assessment_types.report_type(rp).each do |assessment_type| %>
       <div class="col-sm-4">
-        <div class="card card-block">
+        <div class="card card-block report-type-card">
           <h4 class="card-title"><%= link_to assessment_type.name, assessment_type %></h4>
           <ul class="card-text">
             <% assessment_type.templates.each do |s| %>
               <li><%= link_to s.name, year_assessment_type_templates_path(current_year, assessment_type) %></li>
             <% end %>
           </ul>
-          <%= link_to 'Show', [assessment_type], class: 'btn btn-xs btn-primary', role: 'button' %>
-          <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
-          <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, class: 'btn btn-xs btn-danger', role: 'button' %>
+          <div class="actions">
+            <%= link_to 'Show', [assessment_type], class: 'btn btn-xs btn-primary', role: 'button' %>
+            <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
+            <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, class: 'btn btn-xs btn-danger', role: 'button' %>
+          </div>          
         </div>
       </div>
     <% end %>
