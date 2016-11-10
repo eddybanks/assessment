@@ -26,7 +26,7 @@ gem 'vuejs-rails'
 gem 'rolify'
 gem 'figaro'
 gem 'rails-erd'
-
+gem 'rails-assets-tether', '>= 1.1.0', source: 'https://rails-assets.org'
 gem 'sendgrid'
 
 gem 'devise'

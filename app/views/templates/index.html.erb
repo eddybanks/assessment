@@ -20,9 +20,9 @@
         <td><%= template.description %></td>
         <td><%= template.assessment_type %></td>
         <td><%= template.year %></td>
-        <td><%= link_to 'Show', template %></td>
-        <td><%= link_to 'Edit', edit_template_path(template) %></td>
-        <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to 'Show', template %></td>
+        <td><%#= link_to 'Edit', edit_template_path(template) %></td>
+        <td><%#= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Template', new_template_path %>
+<%#= link_to 'New Template', new_template_path %>

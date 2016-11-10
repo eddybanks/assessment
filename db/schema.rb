@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161105214453) do
+ActiveRecord::Schema.define(version: 20161110191410) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20161105214453) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "year_id"
-    t.boolean  "rp_flag"
+    t.integer  "report_type"
     t.index ["year_id"], name: "index_assessment_types_on_year_id", using: :btree
   end
 
