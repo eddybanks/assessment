@@ -1,29 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Assessment Types</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<section id="index-assessment-type" class="index-section container-fluid">
+  <ul class="nav nav-pills nav-stacked assessment-type-tab-nav col-sm-2" role="tablist">
     <% @assessment_types.each do |assessment_type| %>
-      <tr>
-        <td><%= assessment_type.name %></td>
-        <td><%= assessment_type.description %></td>
-        <td><%= link_to 'Show', assessment_type %></td>
-        <td><%= link_to 'Edit', edit_year_assessment_type_path(assessment_type, current_year) %></td>
-        <td><%= link_to 'Destroy', assessment_type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <li class="nav-item">
+      <% if assessment_type == @assessment_types.first %>
+      <%= link_to assessment_type.name, "##{snake(assessment_type.name)}-#{assessment_type.id.to_s}", class: 'nav-link active', data: { toggle: 'tab' } %>
+      <% else %>
+      <%= link_to assessment_type.name, "##{snake(assessment_type.name)}-#{assessment_type.id.to_s}", class: 'nav-link', data: { toggle: 'tab' } %>
+      <% end %>
+    </li>
+  <% end %>
+  </ul>
+  <div class="tab-content assessment-type-tab col-sm-10">
+    <% @assessment_types.each do |assessment_type| %>
+      <% if assessment_type == @assessment_types.first %>
+      <div class="tab-pane fade in active" id="<%= snake(assessment_type.name) %>-<%= assessment_type.id.to_s %>" role="tabpanel">
+      <% else %>
+      <div class="tab-pane fade" id="<%= snake(assessment_type.name) %>-<%= assessment_type.id.to_s %>" role="tabpanel">
+      <% end %>
+        <h3><%= assessment_type.name %></h3>
+        <% assessment_type.templates.each do |template| %>
+          <li><%= template.name %></li>
+        <% end %>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Assessment Type', new_assessment_type_path %>
+  </div>
+  <div class="page-actions">
+    <%#= link_to 'New Assessment Type', new_assessment_type_path %>
+  </div>
+</section>
