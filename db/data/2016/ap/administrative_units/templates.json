@@ -1,5 +1,5 @@
 [
-  { "name": "UNM Generic Template" },
-  { "name": "College of Arts and Sciences" },
-  { "name": "Honors College" }
+  { "name": "UNM Generic Template", "au_path": "generic" },
+  { "name": "College of Arts and Sciences", "au_path": "arts_and_sciences" },
+  { "name": "Honors College", "au_path": "honors" }
 ]

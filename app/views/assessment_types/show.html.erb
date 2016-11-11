@@ -1,14 +1,11 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @assessment_type.name %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @assessment_type.description %>
-</p>
-
-<%= link_to 'Edit', edit_assessment_type_path(@assessment_type) %> |
-<%= link_to 'Back', assessment_types_path %>
+<section id="assessment-type-show" class="section-show">
+  <div class="assessment-type-info">
+    <p>
+      <%= @assessment_type.description %>
+    </p>
+  </div>
+  <div class="page-actions">
+    <%= link_to 'Edit', edit_assessment_type_path(@assessment_type) %> |
+    <%= link_to 'Back', assessment_types_path(report_type: @assessment_type.report_type) %>
+  </div>
+</section>

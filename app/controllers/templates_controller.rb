@@ -4,14 +4,15 @@ class TemplatesController < ApplicationController
   # GET /templates
   # GET /templates.json
   def index
-    @templates = Template.all
+    @templates = Template.order(:name).page params[:page]
   end
 
   # GET /templates/1
   # GET /templates/1.json
   def show
+    @forms = @template.forms.order(:name).page params[:page]
     # page variables
-    @page_header = @template.assessment_type.name
+    @page_header = @template.name
   end
 
   # GET /templates/new

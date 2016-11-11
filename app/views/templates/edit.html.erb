@@ -3,4 +3,4 @@
 <%= render 'form', template: @template %>
 
 <%= link_to 'Show', @template %> |
-<%= link_to 'Back', templates_path %>
+<%= link_to 'Back', year_assessment_type_templates_path(current_year, @template.assessment_type) %>

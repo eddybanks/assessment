@@ -4,7 +4,7 @@ module ApplicationHelper
   end
 
   def report_options
-    return [:ar, :ap]
+    return { ar: 'Assessment Reports', ap: 'Assessment Plans' }
   end
 
   def snake word

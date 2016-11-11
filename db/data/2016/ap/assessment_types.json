@@ -1,5 +1,14 @@
 [
-  { "name": "General Education" },
-  { "name": "Academic Programs" },
-  { "name": "Administrative Units" }
+  {
+    "name": "General Education",
+    "description": "The New Mexico Higher Education Department (NM HED) has created five areas of General Education Common Core Curriculum. The NM HED lists specific competencies under each area and states rationales for each competency, as well as suggestions for how each competency could be assessed"
+  },
+  {
+    "name": "Academic Programs",
+    "description": "All academic programs at UNM are required to develop and submit an academic program assessment plan and annual assessment report. The academic program assessment plan and annual assessment report document how each program intend to complete and actually has completed, respectively, the six steps of an assessment cycle (see diagram below) throughout the academic year."
+  },
+  {
+    "name": "Administrative Units",
+    "description": "Both academic and nonacademic administrative units at UNM are expected to develop and submit an administrative unit assessment plan and annual assessment report. The administrative unit assessment plan and annual assessment report document how the unit intend to complete and actually has completed, respectively, the six steps of an assessment cycle (see diagram below) throughout the fiscal year."
+  }
 ]

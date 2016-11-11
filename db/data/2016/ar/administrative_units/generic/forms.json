@@ -1,7 +1,7 @@
 [
   {
     "name": "Form Description", "section": 1,
-    "items": [
+    "input_data": [
       {
         "name": "Introduction",
         "input_type": "header",
@@ -36,7 +36,7 @@
         "name": "Part II",
         "input_type": "subheader",
         "section": 4,
-        "input_data": ["The second part of the template requires information on the program’s goal(s), student learning/administrative outcomes, assessment measures, data results and analysis, and recommendations for program improvement and/or changes.",
+        "input_data": ["The second part of the template requires information on the program’s goal(s), student learning/administrative outcomes, assessment measures, input_data results and analysis, and recommendations for program improvement and/or changes.",
             "Each program goal is followed by a table with seven columns. For each program goal, list in the table the AUOs/SLOs that target or are align with the goal. Then include the assessment information for each student learning outcome(s) listed in the table.",
             "After completing the table, explain how each SLO was met, partially met, or not met.",
             "If needed, for additional goals, copy and paste the goal-table format onto a separate page."]

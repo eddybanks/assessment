@@ -25,9 +25,9 @@ Rails.application.routes.draw do
         end
       end
     end
-    resources :templates, only: [:new, :create, :show, :edit, :update, :destroy]
-    resources :forms, only: [:new, :create, :show, :edit, :update, :destroy]
-    resources :parts, only: [:new, :create, :show, :edit, :update, :destroy]
   end
+  resources :templates, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :forms, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :parts, only: [:new, :create, :show, :edit, :update, :destroy]
 
 end

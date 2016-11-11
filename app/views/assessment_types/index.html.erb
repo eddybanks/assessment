@@ -19,7 +19,7 @@
       <% end %>
         <h3><%= assessment_type.name %></h3>
         <% assessment_type.templates.each do |template| %>
-          <li><%= template.name %></li>
+          <li><%= link_to template.name, template %></li>
         <% end %>
       </div>
     <% end %>

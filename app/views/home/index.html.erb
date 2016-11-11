@@ -1,8 +1,8 @@
 <section class="container">
-  <% report_options.each do |rp| %>
+  <% report_options.each do |k,v| %>
     <div class="home-card-group row">
-      <h3 class="page-header"><%= image_tag "http://my.unm.edu/images/card_top-widgets.png" %> Assessment Reports</h3>
-      <% @assessment_types.report_type(rp).each do |assessment_type| %>
+      <h3 class="page-header"><%= image_tag "http://my.unm.edu/images/card_top-widgets.png" %><%= v %></h3>
+      <% @assessment_types.report_type(k).each do |assessment_type| %>
         <div class="col-sm-4">
           <div class="card report-type-card">
             <div class="card-block">
@@ -16,7 +16,7 @@
             <div class="actions card-footer">
               <%= link_to 'Show', [assessment_type], class: 'btn btn-xs btn-primary', role: 'button' %>
               <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
-              <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, class: 'btn btn-xs btn-danger', role: 'button' %>
+              <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, confirm: "Are you sure you want to destroy the #{assessment_type.name} #{v}?", class: 'btn btn-xs btn-danger', role: 'button' %>
             </div>
           </div>
         </div>

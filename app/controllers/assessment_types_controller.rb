@@ -7,6 +7,8 @@ class AssessmentTypesController < ApplicationController
   def index
     @assessment_types = scoped_year.assessment_types.all
     @assessment_types = scoped_year.assessment_types.report_type(params[:report_type])
+    # page variables
+    @page_header = report_options[params[:report_type]]
   end
 
   # GET /assessment_types/1
@@ -60,7 +62,7 @@ class AssessmentTypesController < ApplicationController
   def destroy
     @assessment_type.destroy
     respond_to do |format|
-      format.html { redirect_to assessment_types_url, notice: 'Assessment type was successfully destroyed.' }
+      format.html { redirect_to root_url, notice: 'Assessment type was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -78,5 +80,9 @@ class AssessmentTypesController < ApplicationController
 
     def scoped_year
       Year.find_by name: '2016'
+    end
+
+    def report_options
+      return { ar: 'Assessment Reports', ap: 'Assessment Plans' }
     end
 end
