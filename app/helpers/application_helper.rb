@@ -6,4 +6,8 @@ module ApplicationHelper
   def report_options
     return [:ar, :ap]
   end
+
+  def snake word
+    word.underscore.gsub(" ", "_")
+  end
 end
