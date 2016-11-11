@@ -11,9 +11,6 @@ class HomeController < ApplicationController
   def calendar
   end
 
-  def faqs
-  end
-
   def wiki
   end
 

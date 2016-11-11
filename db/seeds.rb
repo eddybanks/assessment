@@ -1,11 +1,5 @@
 ftree = { a: 'years', b: [:ar, :ap], c: 'assessment_types', d: 'templates', e: 'forms' }
 
-admin = User.create(email: 'admin@admin.com', password: '123456')
-input_types = JSON.parse(open('db/data/input_types.json').read)
-input_types.each do |input|
-  InputType.create(input)
-end
-
 def read_file json_file
   x = nil
   begin
@@ -17,6 +11,17 @@ end
 
 def dirname model
   model.name.underscore.gsub(" ", "_")
+end
+
+admin = User.create(email: 'admin@admin.com', password: '123456')
+input_types = read_file('db/data/input_types.json')
+input_types.each do |input|
+  InputType.create(input)
+end
+
+faqs = read_file('db/data/faqs.json')
+faqs.each do |faq|
+  Faq.create(faq)
 end
 
 years = JSON.parse(open('db/data/years.json').read)

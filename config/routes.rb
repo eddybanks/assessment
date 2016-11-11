@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get   'about'     =>  'home#about'
   get   'calendar'  =>  'home#calendar'
   get   'home'      =>  'home#index'
-  get   'faqs'      =>  'home#faqs'
   get   'wiki'      =>  'home#wiki'
 
   devise_for :users
@@ -29,5 +28,6 @@ Rails.application.routes.draw do
   resources :templates, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :forms, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :parts, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :faqs
 
 end

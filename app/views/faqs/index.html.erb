@@ -1,0 +1,21 @@
+<section id="faqs-home" class="faqs-section">
+  <div id="faqs-accordion" class="" role="tablist" aria-multiselectable="true">
+    <% @faqs.each do |faq| %>
+      <div class="card">
+
+        <div class="card-header" role="tab" id="faq-heading-<%= faq.id %>">
+          <h5 class="mb-0">
+            <%= link_to faq.question, "#collapse-faq-#{faq.id}", data: { toggle: 'collapse', parent: '#faqs-accordion' }, aria: { expanded: true, controls: 'collapse-faq-#{faq.id}'} %>
+          </h5>
+        </div>
+
+        <div id="collapse-faq-<%= faq.id %>" class="collapse" role="tabpanel" aria-labelledby="faq-heading-<%= faq.id %>">
+          <div class="card-block">
+            <%= faq.answer %>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+</section>
