@@ -31,7 +31,9 @@ class AssessmentTypesController < ApplicationController
   # POST /assessment_types.json
   def create
     @assessment_type = AssessmentType.new(assessment_type_params)
+    authorize @assessment_type
 
+    record = @assessment_type
     respond_to do |format|
       if @assessment_type.save
         format.html { redirect_to @assessment_type, notice: 'Assessment type was successfully created.' }
@@ -46,6 +48,7 @@ class AssessmentTypesController < ApplicationController
   # PATCH/PUT /assessment_types/1
   # PATCH/PUT /assessment_types/1.json
   def update
+    authorize @assessment_type
     respond_to do |format|
       if @assessment_type.update(assessment_type_params)
         format.html { redirect_to @assessment_type, notice: 'Assessment type was successfully updated.' }
@@ -60,6 +63,7 @@ class AssessmentTypesController < ApplicationController
   # DELETE /assessment_types/1
   # DELETE /assessment_types/1.json
   def destroy
+    authorize @assessment_type
     @assessment_type.destroy
     respond_to do |format|
       format.html { redirect_to root_url, notice: 'Assessment type was successfully destroyed.' }
