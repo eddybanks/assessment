@@ -10,9 +10,11 @@
 
   <body>
     <div class="outer-wrapper">
-      <%= render 'layouts/unm_nav' %>
-      <%= render 'layouts/jumbo_box' %>
-      <%= render 'layouts/menu' %>
+      <% if !@no_layout %>
+        <%= render 'layouts/unm_nav' %>
+        <%= render 'layouts/jumbo_box' %>
+        <%= render 'layouts/menu' %>
+      <% end %>
       <div class="inner-wrapper">
         <% if @page_header.present? %>
         <%= render 'layouts/header' %>
