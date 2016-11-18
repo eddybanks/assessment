@@ -8,7 +8,7 @@ class AssessmentTypePolicy < ApplicationPolicy
 	def destroy?
   	user.has_role? :superuser
 	end
-end
+
 
 
   class Scope < Scope

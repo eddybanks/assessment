@@ -21,7 +21,9 @@
         <% end %>
         <%= yield %>
       </div>
+      <% if !@no_layout %>
       <%= render 'layouts/footer' %>
+      <% end %>
     </div>
   </body>
 </html>

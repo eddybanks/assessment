@@ -1,10 +1,10 @@
-<div class="panel panel-default devise-bs">
-	<div class="panel-heading">
-<h2>Log in</h2>
+<div class="container">
+<form class="form-signin">
+<h2 class="form-signin-heading">Log in</h2>
 
 <% @no_layout = true %>
 
-</div>
+
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <%= devise_error_messages! %>
   <div class="form-group">
@@ -24,6 +24,9 @@
       <% end %>
       <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
     <% end %>
+    <div class="devise-links">
+    <%= render "devise/shared/links" %>
   </div>
+ </form>
 
-<%= render "devise/shared/links" %>
+</div>

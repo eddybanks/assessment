@@ -1,9 +1,11 @@
+<div class="container">
+<form class="form-signup">
 <h2>Sign up</h2>
-<%= devise_error_messages! %>
+<% @no_layout = true %>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
  <%= devise_error_messages! %>
 
-  <div class="form-group">
+      <div class="form-group">
         <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
@@ -16,6 +18,11 @@
         <%= f.password_field :password_confirmation, class: "form-control" %>
       </div>
       <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
-    <% end %>
 
+    <% end %>
+    <div class="devise-links">
 <%= render "devise/shared/links" %>
+</div>
+</form>
+
+</div>

@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   get   'wiki'      =>  'home#wiki'
 
   devise_for :users
+  #resources :users
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
-  resources :users
+  
   resources :input_data
   resources :input_types
   resources :items
