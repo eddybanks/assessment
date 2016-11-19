@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161111052327) do
+ActiveRecord::Schema.define(version: 20161111195238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,9 +60,11 @@ ActiveRecord::Schema.define(version: 20161111052327) do
   create_table "items", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.integer  "part_id"
+    t.integer  "input_type_id"
+    t.index ["input_type_id"], name: "index_items_on_input_type_id", using: :btree
     t.index ["part_id"], name: "index_items_on_part_id", using: :btree
   end
 
@@ -137,6 +139,7 @@ ActiveRecord::Schema.define(version: 20161111052327) do
   add_foreign_key "forms", "templates"
   add_foreign_key "forms", "years"
   add_foreign_key "input_data", "items"
+  add_foreign_key "items", "input_types"
   add_foreign_key "items", "parts"
   add_foreign_key "templates", "assessment_types"
   add_foreign_key "templates", "years"
