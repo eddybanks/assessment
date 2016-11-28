@@ -7,7 +7,15 @@ Rails.application.routes.draw do
   get   'home'      =>  'home#index'
   get   'wiki'      =>  'home#wiki'
 
-  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :users, controllers: { 
+    sessions: 'users/sessions',
+    mailer: 'users/mailer',
+    registrations: 'users/registrations',
+    confirmations: 'users/confirmations',
+    passwords: 'users/passwords',
+    shared: 'users/shared',
+    unlocks: 'users/unlocks'
+  }
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
   
