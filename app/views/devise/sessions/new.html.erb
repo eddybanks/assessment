@@ -1,6 +1,5 @@
-<div class="container">
-<form class="form-signin">
-<h2 class="form-signin-heading">Log in</h2>
+
+<h2 >Log in</h2>
 
 <% @no_layout = true %>
 
@@ -24,9 +23,7 @@
       <% end %>
       <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
     <% end %>
-    <div class="devise-links">
+    
     <%= render "devise/shared/links" %>
-  </div>
- </form>
 
-</div>
+ 
