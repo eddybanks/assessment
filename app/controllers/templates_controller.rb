@@ -4,7 +4,8 @@ class TemplatesController < ApplicationController
   # GET /templates
   # GET /templates.json
   def index
-    @templates = Template.order(:name).page params[:page]
+    @assessment_type = AssessmentType.find(params[:assessment_type_id])
+    @templates = @assessment_type.templates.order(:name).page params[:page]
   end
 
   # GET /templates/1

@@ -1,5 +1,38 @@
-<section id="index-template" class="index-section">
-  <div class="form-list">
-
-  </div>
+<section id="index-template" class="index-section container-fluid">
+    <ul class="nav nav-pills nav-stacked assessment-type-tab-nav col-sm-2" role="tablist">
+      <% @templates.each do |template| %>
+      <li class="nav-item">
+        <% if template == @templates.first %>
+        <%= link_to template.name, "##{snake(template.name)}-#{template.id.to_s}", class: 'nav-link active', data: { toggle: 'tab' } %>
+        <% else %>
+        <%= link_to template.name, "##{snake(template.name)}-#{template.id.to_s}", class: 'nav-link', data: { toggle: 'tab' } %>
+        <% end %>
+      </li>
+    <% end %>
+    </ul>
+    <div class="tab-content template-type-tab col-sm-10">
+      <% @templates.each do |template| %>
+        <% if template == @templates.first %>
+        <div class="tab-pane fade in active" id="<%= snake(template.name) %>-<%= template.id.to_s %>" role="tabpanel">
+        <% else %>
+        <div class="tab-pane fade" id="<%= snake(template.name) %>-<%= template.id.to_s %>" role="tabpanel">
+        <% end %>
+          <h3><%= template.name %></h3>
+          <% template.forms.each do |form| %>
+            <div class="form-list">
+              <p class="form-list-item">
+                <%= form.name %>
+                <span class="form-list-actions pull-right">
+                  <%= link_to "Show", form %>
+                  <%= link_to "Edit", edit_form_path(form) %>
+                  <%= link_to "Delete", form, method: :delete, confirm: 'Are you sure you want to delete?' %>
+                </span>
+              </p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="page-actions">
+    </div>
 </section>

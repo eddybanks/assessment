@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  
+
   protect_from_forgery with: :exception
   before_action :set_paper_trail_whodunnit
   before_action :authenticate_user!
@@ -12,6 +12,9 @@ class ApplicationController < ActionController::Base
     flash[:alert] = "You are not authorized to perform this action."
     redirect_to(request.referrer || root_path)
   end
-   
-  
+
+  def report_options
+    return { ar: 'Assessment Reports', ap: 'Assessment Plans' }
+  end
+
 end
