@@ -6,13 +6,10 @@
         <div class="col-sm-4">
           <div class="card report-type-card">
             <div class="card-block">
+              <%= link_to fa_stacked_icon('info inverse', base: 'circle', class: 'pull-right'), "##{assessment_type.id}_assessment_type_modal",
+              data: { toggle: 'modal', target: "##{assessment_type.id}_assessment_type_modal" } %>
               <h4 class="card-title"><%= link_to assessment_type.name, assessment_type %></h4>
             </div>
-            <ul class="list-group list-group-flush collapse">
-              <% assessment_type.templates.each do |s| %>
-                <li class="list-group-item"><%= link_to s.name, year_assessment_type_templates_path(current_year, assessment_type) %></li>
-              <% end %>
-            </ul>
             <div class="actions card-footer">
               <%= link_to 'Show', [assessment_type], class: 'btn btn-xs btn-primary', role: 'button' %>
               <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
@@ -20,6 +17,7 @@
             </div>
           </div>
         </div>
+        <%= render 'assessment_type_info_modal', assessment_type: assessment_type %>
       <% end %>
     </div>
   <% end %>
