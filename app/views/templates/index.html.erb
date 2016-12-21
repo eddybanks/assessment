@@ -10,18 +10,19 @@
       </li>
     <% end %>
     </ul>
-    <div class="tab-content template-type-tab col-sm-10">
+    <div class="tab-content template-type-tab offset-sm-1 col-sm-8">
+      <br />
       <% @templates.each do |template| %>
         <% if template == @templates.first %>
         <div class="tab-pane fade in active" id="<%= snake(template.name) %>-<%= template.id.to_s %>" role="tabpanel">
         <% else %>
         <div class="tab-pane fade" id="<%= snake(template.name) %>-<%= template.id.to_s %>" role="tabpanel">
         <% end %>
-          <h3><%= template.name %></h3>
+          <h3><%= template.name %></h3><br />
           <% template.forms.each do |form| %>
             <div class="form-list">
               <p class="form-list-item">
-                <%= form.name %>
+                <%= link_to form.name, full_form_form_path(form) %>
                 <span class="form-list-actions pull-right">
                   <%= link_to "Show", form %>
                   <%= link_to "Edit", edit_form_path(form) %>

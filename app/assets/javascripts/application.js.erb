@@ -3,12 +3,16 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= require vue
+//= require vue-router
+// = require vue-resource
 //= require moment
 //= require fullcalendar
 //= require_tree .
 
 let startup = () => {
   calendar_func();
+  vue_form();
 }
 
 $(document).on('turbolinks:load', startup);

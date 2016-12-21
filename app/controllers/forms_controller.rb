@@ -1,5 +1,5 @@
 class FormsController < ApplicationController
-  before_action :set_form, only: [:show, :edit, :update, :destroy]
+  before_action :set_form, only: [:show, :edit, :update, :destroy, :full_form]
 
   # GET /forms
   # GET /forms.json
@@ -59,6 +59,9 @@ class FormsController < ApplicationController
       format.html { redirect_to forms_url, notice: 'Form was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def full_form
   end
 
   private

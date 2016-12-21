@@ -8,6 +8,11 @@
         <h4 class="modal-header"><%= assessment_type.name %></h4>
       </div>
       <div class="modal-body">
+        <div class="assessment-type-info">
+          <p>
+            <%= assessment_type.description %>
+          </p>
+        </div>
         <% assessment_type.templates.each do |s| %>
           <li class="list-group-item"><%= link_to s.name, year_assessment_type_templates_path(current_year, assessment_type) %></li>
         <% end %>

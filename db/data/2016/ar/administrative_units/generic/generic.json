@@ -1,0 +1,104 @@
+[
+  {
+    "name": "Form Description", "section": 1,
+    "input_data": [
+      {
+        "name": "Introduction",
+        "input_type": "header",
+        "section": 1,
+        "input_data": ["The following template provides the guidelines for annually recording the assessment of student learning outcomes and/or administrative unit outcomes (AUOs) for academic and non-academic administrative units at UNM.",
+                  "Alternative formats (e.g., those used by relevant professional associations) may be acceptable as long as the assessment information requested in this template is provided.",
+                  "If you have any questions, please contact the Office of Assessment at assess@unm.edu or (505) 277-4130.",
+                  "Administrative units should have an assessment plan and process that: 1) reflects the six steps of a continuous assessment cycle (refer to the “Annual Assessment Cycle Process” diagram for guidance) and 2) includes at least: one mission statement, one program goal, three SLOs and/or AUOs, and three key unit assessment measures."]
+      },
+      {
+        "name": "Each unit should have an approved assessment plan (i.e., UNM Administrative Units Assessment Plan Template) to:",
+        "input_type": "subheader"
+      },
+      {
+        "name": "1_list_1",
+        "input_type": "list",
+        "section": "0103"
+      },
+      {
+        "name": "Overview of Annual Program Report Template",
+        "input_type": "header",
+        "section": 2,
+        "input_data": ["The template is divided into two parts."]
+      },
+      {
+        "name": "Part I",
+        "input_type": "subheader",
+        "section": 3,
+        "input_data": ["The first part of the template serves as the cover page. Please provide all of the information requested for the cover page."]
+      },
+      {
+        "name": "Part II",
+        "input_type": "subheader",
+        "section": 4,
+        "input_data": ["The second part of the template requires information on the program’s goal(s), student learning/administrative outcomes, assessment measures, input_data results and analysis, and recommendations for program improvement and/or changes.",
+            "Each program goal is followed by a table with seven columns. For each program goal, list in the table the AUOs/SLOs that target or are align with the goal. Then include the assessment information for each student learning outcome(s) listed in the table.",
+            "After completing the table, explain how each SLO was met, partially met, or not met.",
+            "If needed, for additional goals, copy and paste the goal-table format onto a separate page."]
+      },
+      {
+        "name": "Brief description of the seven columns",
+        "input_type": "table",
+        "section": "010207"
+      }
+    ]
+  },
+
+  {
+    "name": "Part I: Cover Page", "section": 2,
+    "items": [
+      { "name": "Name of Academic Department(if relevant)",
+        "input_type": "text_field",
+        "section": 6
+      },
+      { "name": "Name of College/School/Branch",
+        "input_type": "text_field",
+        "section": 7
+      },
+      { "name": "Academic Year/Assessment Period",
+        "input_type": "text_field",
+        "section": 8
+      },
+      { "name": "Submitted By (include email address)",
+        "input_type": "text_field",
+        "section": 9
+      },
+      { "name": "Date Submitted to College/School/Branch for Review",
+        "input_type": "date",
+        "section": 10
+      },
+      { "name": "Date Reviewed by College Assessment and Review Committee (CARC) or the equivalent",
+        "input_type": "date"
+      },
+      { "name": "State whether ALL of the program’s student learning outcomes (SLOs) are targeted/assessed/measured within one year, two years, OR three years",
+        "input_type": "text_area"
+      },
+      { "name": "If the program’s SLO’s are targeted/assessed/measured within two years or three years, please state whether this assessment record focuses on SLOs from the first year, second year, or third year",
+        "input_type": "text_area"
+      },
+      { "name": "Describe the actions and/or improvements that were implemented during the previous reporting period (provide relevant evidence)",
+        "input_type": "text_area"
+      }
+    ]
+  },
+
+  {
+    "name": "Part II: Assessment Report", "section": 3,
+    "items": [
+      { "name": "Program Goal #1",
+        "input_type": "header"
+      },
+      { "name": "Program Goal #2",
+        "input_type": "header"
+      },
+      { "name": "Program Goal #3",
+        "input_type": "header"
+      }
+    ]
+  }
+]

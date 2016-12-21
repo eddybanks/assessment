@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users
 
   mount RailsAdmin::Engine => '//admin', as: 'rails_admin'
-  
+
   resources :input_data
   resources :input_types
   resources :items
@@ -27,7 +27,9 @@ Rails.application.routes.draw do
     end
   end
   resources :templates, only: [:new, :create, :show, :edit, :update, :destroy]
-  resources :forms, only: [:new, :create, :show, :edit, :update, :destroy]
+  resources :forms, only: [:new, :create, :show, :edit, :update, :destroy] do
+    get :full_form, on: :member
+  end
   resources :parts, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :faqs
 
