@@ -1,20 +1,33 @@
 <%= form_tag input_data_path, method: :post do %>
 
-  <% @form.parts.each do |part| %>
-    <div class="form-part">
-      <h3 id="part-header"><%= part.name %></h3>
-      <% @temp_data.each do |td| %>
-        <% if td.item.part == part %>
-          <%= simple_fields_for 'input_data[]', td do |t| %>
-            <%= render "input_data/input/#{td.item.input_type.name}", t: t, td: td %>
-            <%= hidden_field_tag :form_id, @form.id %>
-          <% end %>
-        <% end %>
-      <% end %>
-    </div>
-  <% end %>
+  <ul class="nav nav-tabs" id="form-tabs" role="tablist">
+    <% @form.parts.each do |part| %>
+        <li class="nav-item">
+          <%= link_to part.name, "#part_#{part.id}", class: "#{part.name == 'Part I: Cover Page' ? 'nav-link active' : 'nav-link'}", role: 'tab',
+          data: { toggle: 'tab' }, aria: { controls: "#part_#{part.id}" } %>
+        </li>
+    <% end %>
+  </ul>
+  <div class="tab-content">
+    <% @form.parts.each do |part| %>
+      <div class="form-part <%= part.name == 'Part I: Cover Page' ? 'tab-pane active' : 'tab-pane' %>"
+         id="part_<%= part.id %>" role="tabpanel">
+         <div class="part-content">
+           <h3 id="part-header"><%= part.name %></h3>
+           <% @temp_data.each do |td| %>
+             <% if td.item.part == part %>
+               <%= simple_fields_for 'input_data[]', td do |t| %>
+                 <%= render "input_data/input/#{td.item.input_type.name}", t: t, td: td %>
+                 <%= hidden_field_tag :form_id, @form.id %>
+               <% end %>
+             <% end %>
+           <% end %>
+         </div>
+      </div>
+    <% end %>
 
-  <div class="form-actions">
-    <%= submit_tag %>
+    <div class="form-actions">
+      <%= submit_tag 'Save Changes', class: 'btn btn-secondary' %>
+    </div>
   </div>
 <% end %>
