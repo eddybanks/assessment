@@ -52,6 +52,23 @@ years.each do |yr|
                 form = template.forms.create(
                   name: autype['name']
                 )
+                part_file = nil
+                part_file ||= read_file("db/data/#{year.name}/#{b}/#{dirname(assessment_type)}/#{astype['au_path']}//#{astype['au_path']}.json")
+                if part_file.present?
+                  part_file.each do |p|
+                    part = form.parts.create(
+                      name: p['name']
+                    )
+                    if p['items'].present?
+                      p['items'].each do |i|
+                        item = part.items.create(
+                          name: i['name'],
+                          input_type_id: InputType.find_by(name: i['input_type']).id
+                        )
+                      end
+                    end
+                  end
+                end
               end
             end
           end
