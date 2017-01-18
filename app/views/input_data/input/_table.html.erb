@@ -1,0 +1,18 @@
+<div class="form-field">
+  <% row_num = td.item.section.name[2..3].to_i %>
+  <% col_num = td.item.section.name[4..5].to_i %>
+  <table class="table table-bordered table-striped">
+    <tr>
+      <% col_num.times do |c| %>
+        <th><%= "Column_" + c.to_s %></th>
+      <% end %>
+    </tr>
+    <% row_num.times do |r| %>
+      <tr>
+        <% col_num.times do |c| %>
+          <td><%= ["entry_",c,"_",r].join %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</div>

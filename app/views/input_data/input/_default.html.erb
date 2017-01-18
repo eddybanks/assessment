@@ -1,0 +1,8 @@
+<% if td.content.present? %>
+  <p><%= td.item.name %></p>
+  <p><%= td.content %></p>
+<% else %>
+  <div class="form-field">
+    <%= t.input :content, label: td.item.name %>
+  </div>
+<% end %>

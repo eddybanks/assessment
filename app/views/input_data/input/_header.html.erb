@@ -1,0 +1,6 @@
+<% if td.content.present? %>
+  <h4><%= td.item.name %></h4>
+  <p><%= simple_format td.content %></p>
+<% else %>
+  <h4><%= td.item.name %></h4>
+<% end %>

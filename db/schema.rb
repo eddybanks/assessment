@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161228045110) do
+ActiveRecord::Schema.define(version: 20170118045833) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,6 +87,14 @@ ActiveRecord::Schema.define(version: 20161228045110) do
     t.index ["name"], name: "index_roles_on_name", using: :btree
   end
 
+  create_table "sections", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_sections_on_item_id", using: :btree
+  end
+
   create_table "templates", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
@@ -144,6 +152,7 @@ ActiveRecord::Schema.define(version: 20161228045110) do
   add_foreign_key "items", "input_types"
   add_foreign_key "items", "parts"
   add_foreign_key "parts", "forms"
+  add_foreign_key "sections", "items"
   add_foreign_key "templates", "assessment_types"
   add_foreign_key "templates", "years"
 end

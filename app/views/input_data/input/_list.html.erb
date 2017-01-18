@@ -1,0 +1,8 @@
+<div class="form-field">
+  <% @list_count = td.item.section.name[2..3].to_i %>
+  <ul>
+    <% @list_count.times do |l| %>
+      <li><%= ["item_",l].join %></li>
+    <% end %>
+  </ul>
+</div>

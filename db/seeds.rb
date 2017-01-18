@@ -65,6 +65,10 @@ years.each do |yr|
                           name: i['name'],
                           input_type_id: InputType.find_by(name: i['input_type']).id
                         )
+                        item.section = Section.create( name: i['section'] )
+                        data = ""
+                        i['input_data'].each{ |d| data<<d } if i['input_data'].present?
+                        item.input_datum = InputDatum.create( content: data ) if i['input_data'].present?
                       end
                     end
                   end

@@ -1,11 +1,20 @@
-<%= simple_form_for(@input_datum) do |f| %>
-  <%= f.error_notification %>
+<%= form_tag input_data_path, method: :post do %>
 
-  <div class="form-inputs">
-    <%= f.input :content %>
-  </div>
+  <% @form.parts.each do |part| %>
+    <div class="form-part">
+      <h3 id="part-header"><%= part.name %></h3>
+      <% @temp_data.each do |td| %>
+        <% if td.item.part == part %>
+          <%= simple_fields_for 'input_data[]', td do |t| %>
+            <%= render "input_data/input/#{td.item.input_type.name}", t: t, td: td %>
+            <%= hidden_field_tag :form_id, @form.id %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= submit_tag %>
   </div>
 <% end %>

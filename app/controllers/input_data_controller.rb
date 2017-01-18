@@ -14,7 +14,17 @@ class InputDataController < ApplicationController
 
   # GET /input_data/new
   def new
-    @input_datum = InputDatum.new
+    @form = Form.find(params[:form_id])
+    @temp_data = []
+    @form.parts.each do |p|
+      p.items.each do |i|
+        if !i.input_datum.present?
+          i.input_datum = InputDatum.new
+        end
+        @temp_data << i.input_datum
+      end
+    end
+    @temp_data = @temp_data.reverse
   end
 
   # GET /input_data/1/edit
@@ -24,10 +34,8 @@ class InputDataController < ApplicationController
   # POST /input_data
   # POST /input_data.json
   def create
-    @input_datum = InputDatum.new(input_datum_params)
-
     respond_to do |format|
-      if @input_datum.save
+      if @input_datum.update(params[:input_data].keys, params[:input_data].values)
         format.html { redirect_to @input_datum, notice: 'Input datum was successfully created.' }
         format.json { render :show, status: :created, location: @input_datum }
       else
@@ -69,6 +77,6 @@ class InputDataController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def input_datum_params
-      params.require(:input_datum).permit(:content)
+      params.require(:input_datum).permit(:content, :item_id)
     end
 end
