@@ -6,6 +6,7 @@ $af_white: #EDF2F4;
 $jet: #2E3532;
 $white: #FFFFFF;
 $royalblue: #4169E1;
+$black: #000000;
 
 // fonts
 $open-sans: 'Open Sans', sans-serif;
@@ -25,6 +26,8 @@ $footer-bg: url('//webcore.unm.edu/v2/images/mesa-mountain-red.png');
 @mixin links($lvcolor: rgba(white, 1), $hacolor: rgba(240,230,220, 0.7)) {
   a:link, a:visited {
     color: $lvcolor;
+    text-decoration: none;
+    background-color: inherit;
   }
 
   a:hover, a:active {

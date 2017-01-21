@@ -10,6 +10,15 @@ nav #top-nav {
   }
 }
 
+.index-section .nav {
+  .nav-item {
+    background: rgba($jet, 0.1);
+    @include links($jet, $royalblue);
+    border: 1px solid rgba($jet, 0.2);
+    border-radius: 2px;
+  }
+}
+
 header {
   .page-header {
     border-bottom: 3px solid rgba($jet, 0.3);
@@ -23,5 +32,5 @@ footer {
   margin: 0;
   padding: 2% 0;
   @include links;
-  @include fonts($dosis, $white, 0.8em);
+  @include fonts($open-sans, $white, 0.8em);
 }
