@@ -6,12 +6,10 @@
         <div class="col-sm-4">
           <div class="card report-type-card">
             <div class="card-block">
-              <%= link_to fa_stacked_icon('info inverse', base: 'circle', class: 'pull-right'), "##{assessment_type.id}_assessment_type_modal",
-              data: { toggle: 'modal', target: "##{assessment_type.id}_assessment_type_modal" } %>
               <h4 class="card-title"><%= link_to assessment_type.name, year_assessment_type_templates_path(current_year, assessment_type) %></h4>
             </div>
             <div class="actions card-footer">
-              <%= link_to 'Show', [assessment_type], class: 'btn btn-xs btn-primary', role: 'button' %>
+              <%= link_to 'Info', "##{assessment_type.id}_assessment_type_modal", class: 'btn btn-xs btn-primary', role: 'button', data: { toggle: 'modal', target: "##{assessment_type.id}_assessment_type_modal" } %>
               <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
               <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, data: { confirm: "Are you sure you want to destroy the #{assessment_type.name} #{v}?" }, class: 'btn btn-xs btn-danger', role: 'button' %>
             </div>

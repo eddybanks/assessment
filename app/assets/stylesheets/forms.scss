@@ -10,7 +10,7 @@
     margin-left: 5px;
   }
   @include links(rgba($black, 0.8), rgba($black, 0.6));
-  @include fonts($aref-ruqaa, $jet, 1em);
+  @include fonts($open-sans, $jet, 1em);
 }
 
 .form-action {
