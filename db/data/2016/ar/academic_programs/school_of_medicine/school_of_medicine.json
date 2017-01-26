@@ -2,33 +2,31 @@
  {
    "name": "Part I: Cover Page", "section":1,
    "items": [
-   {
-   	"name": "Academic Program",
-   	"input_type": "text_field"
-   },
-   {
-   	"name": "Department/Program",
-   	"input_type": "text_field"
-   },
-    {
-   	"name": "Degree Program",
-   	"input_type": "text_field"
-   },
-    {
-   	"name": "Person(s) preparing reports",
-   	"input_type": "text_field"
-   },
-    {
-   	"name": "Date Submitted",
-   	"input_type": "date"
-   },
-    {
-   	"name": "Describe the actions and/or revisions that were implemented during the previous reporting period.(Appendix 1—attach relevant evidence, i.e., updated syllabi, curricular updates, program initiatives, etc.)",
-   	"input_type": "text_area"
-   }
-
+     {
+     	"name": "Academic Program",
+     	"input_type": "text_field"
+     },
+     {
+     	"name": "Department/Program",
+     	"input_type": "text_field"
+     },
+      {
+     	"name": "Degree Program",
+     	"input_type": "text_field"
+     },
+      {
+     	"name": "Person(s) preparing reports",
+     	"input_type": "text_field"
+     },
+      {
+     	"name": "Date Submitted",
+     	"input_type": "date"
+     },
+      {
+     	"name": "Describe the actions and/or revisions that were implemented during the previous reporting period.(Appendix 1—attach relevant evidence, i.e., updated syllabi, curricular updates, program initiatives, etc.)",
+     	"input_type": "text_area"
+     }
    ]
-
  },
 
  {

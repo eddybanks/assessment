@@ -24,7 +24,7 @@ faqs.each do |faq|
   Faq.create(faq)
 end
 
-years = JSON.parse(open('db/data/years.json').read)
+years = read_file('db/data/years.json')
 years.each do |yr|
   year = Year.find_or_create_by(yr)
   ftree[:b].each do |b|

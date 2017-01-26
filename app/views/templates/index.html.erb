@@ -22,11 +22,11 @@
           <div class="form-list">
             <% template.forms.each do |form| %>
               <p class="form-list-item">
-                <%= link_to form.name, full_form_form_path(form) %>
+                <%= link_to form.name, new_input_datum_path(form_id: form.id) %>
                 <span class="form-list-actions pull-right">
-                  <%= link_to "Create", form, class: 'form-action' %>
-                  <%= link_to "Fill", new_input_datum_path(form_id: form.id), class: 'form-action' %>
-                  <%= link_to "Edit", form, class: 'form-action' %>
+                  <%= link_to "Fill Form", new_input_datum_path(form_id: form.id), class: 'form-action' %>
+                  <%#= link_to "Edit", '#', class: 'form-action' %>
+                  <%#= link_to "Preview", '#', class: 'form-action inactive' %>
                 </span>
               </p>
             <% end %>

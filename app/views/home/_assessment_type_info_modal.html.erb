@@ -1,4 +1,4 @@
-<div class="modal fade" id="<%= assessment_type.id %>_assessment_type_modal">
+<div class="modal fade assessment-type-info" id="<%= assessment_type.id %>_assessment_type_modal">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -12,13 +12,10 @@
           <p>
             <%= assessment_type.description %>
           </p>
+          <% assessment_type.templates.each do |s| %>
+            <li class="list-group-item"><%= link_to s.name, year_assessment_type_templates_path(current_year, assessment_type) %></li>
+          <% end %>
         </div>
-        <% assessment_type.templates.each do |s| %>
-          <li class="list-group-item"><%= link_to s.name, year_assessment_type_templates_path(current_year, assessment_type) %></li>
-        <% end %>
-      </div>
-      <div class="modal-footer">
-        <button></button>
       </div>
     </div>
   </div>

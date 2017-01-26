@@ -1,7 +1,7 @@
 [
   {
     "name": "Part I: Cover Page", "section": 1,
-    "template_sublayout": [
+    "items": [
       {
         "name": "Name of Academic Department",
         "input_type": "text_field"
@@ -42,7 +42,7 @@
   },
   {
     "name": "Part II: Assessment Report", "section": 2,
-    "template_sublayout": [
+    "items": [
       {
         "name": "Program Goal",
         "input_type": "text_area"

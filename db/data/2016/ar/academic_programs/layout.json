@@ -5,7 +5,9 @@
       {
         "name": "form_field_label",
         "input_type": "field_input_type",
-        "input_data": ["field_input_if_known"]
+        "input_data": ["field_input_if_known",
+          "next sentence"
+        ]
       },
       {
         "name": "form_field_label_without_known_input_data",

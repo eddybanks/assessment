@@ -10,8 +10,7 @@
             </div>
             <div class="actions card-footer">
               <%= link_to 'Info', "##{assessment_type.id}_assessment_type_modal", class: 'btn btn-xs btn-primary', role: 'button', data: { toggle: 'modal', target: "##{assessment_type.id}_assessment_type_modal" } %>
-              <%= link_to 'Edit', edit_assessment_type_path(assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
-              <%= link_to 'Destroy', assessment_type_path(assessment_type), method: :delete, data: { confirm: "Are you sure you want to destroy the #{assessment_type.name} #{v}?" }, class: 'btn btn-xs btn-danger', role: 'button' %>
+              <%= link_to 'Forms', year_assessment_type_templates_path(current_year, assessment_type), class: 'btn btn-xs btn-warning', role: 'button' %>
             </div>
           </div>
         </div>
